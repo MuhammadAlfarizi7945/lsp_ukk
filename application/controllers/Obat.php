@@ -12,7 +12,7 @@ class Obat extends CI_Controller
 
     public function index()
     {
-        $data['judul'] = "Transaksi | App Laundry";
+        $data['judul'] = "Obat | App Obat";
         $data['obat'] = $this->Obat_model->getAllObat();
         // Ganti 'Your_model_name' dengan nama model Anda
 
@@ -25,7 +25,7 @@ class Obat extends CI_Controller
 
     public function tambah()
     {
-        $data['judul'] = "Tambah Obat | App Apotek";
+        $data['judul'] = "Tambah Obat | App Obat";
         $data['dist'] = $this->Obat_model->getAllDist();
         $data['kat'] = $this->Obat_model->getAllKat();
 
@@ -52,7 +52,7 @@ class Obat extends CI_Controller
 
     public function edit($id)
     {
-        $data['judul'] = "Edit Transaksi | App Laundry";
+        $data['judul'] = "Edit Obat | App Obat";
         $data['dist'] = $this->Obat_model->getAllDist();
         $data['kat'] = $this->Obat_model->getAllkat();
         $data['obat'] = $this->Obat_model->getObatById($id);
@@ -72,14 +72,14 @@ class Obat extends CI_Controller
             $this->load->view('obat/edit', $data);
             $this->load->view('templates/footer');
         } else {
-            $this->Obat_model->EditObat($id);
+            $this->Obat_model->UpdateObat($id);
             $this->session->set_flashdata('flash', 'DiUpdate');
             redirect('obat');
         }
     }
     public function hapus($id)
     {
-        $this->Obat_model->hapusObat($id);
+        $this->Obat_model->DeleteObat($id);
         $this->session->set_flashdata('flash', 'DiHapus');
         redirect('obat');
     }

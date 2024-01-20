@@ -56,7 +56,7 @@ class Obat_model extends CI_Model
         $this->db->update('tbl_obat', $data);
     }
 
-    public function DeleteDist($id)
+    public function DeleteObat($id)
     {
         $this->db->where('kode_obat', $id);
         $this->db->delete('tbl_obat');

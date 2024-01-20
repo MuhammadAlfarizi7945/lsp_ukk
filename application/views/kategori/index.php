@@ -77,7 +77,7 @@
                                                         <a href="<?= base_url(); ?>kategori/edit/<?= $kategori['id_kat']; ?>" class="btn btn-success btn-circle">
                                                             <i class="fas fa-edit"></i>
                                                         </a> |
-                                                        <a href="<?= base_url(); ?>kategori/hapus/<?= $kategori['nama_kat']; ?>" class="btn btn-danger btn-circle" onclick="return confirm('Are You Sure...?')">
+                                                        <a href="<?= base_url(); ?>kategori/hapus/<?= $kategori['id_kat']; ?>" class="btn btn-danger btn-circle" onclick="return confirm('Are You Sure...?')">
                                                             <i class="fas fa-trash"></i>
                                                         </a>
                                                     </td>
